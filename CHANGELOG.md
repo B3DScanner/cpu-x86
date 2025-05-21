@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.3](https://github.com/B3DScanner/cpu-x86/compare/v1.1.2...v1.1.3) (2025-05-21)
+
+
+### Bug Fixes
+
+* **src/x86:** Changed __cpuid to cpux86::cpuid from cpu_x86_Linux and cpu_x86_Windows in cpu_x86.cpp ([8aa5a52](https://github.com/B3DScanner/cpu-x86/commit/8aa5a52876ec1fe228fdd1e14727f3cfd933ec25))
+
 ## [1.1.2](https://github.com/B3DScanner/cpu-x86/compare/v1.1.1...v1.1.2) (2025-05-21)
 
 
