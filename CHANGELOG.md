@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2](https://github.com/B3DScanner/cpu-x86/compare/v1.1.1...v1.1.2) (2025-05-21)
+
+
+### Bug Fixes
+
+* **src\x86:** Added missing function __cpuid for Clang and gcc compilers ([0658305](https://github.com/B3DScanner/cpu-x86/commit/0658305c2273cb657e262d37bdeec00a37450c82))
+
 ## [1.1.1](https://github.com/B3DScanner/cpu-x86/compare/v1.1.0...v1.1.1) (2025-04-23)
 
 
