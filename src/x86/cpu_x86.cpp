@@ -94,13 +94,13 @@ std::string cpu_x86::get_cpu_brand_string()
     char CPUBrandString[0x40];
     memset(CPUBrandString, 0, sizeof(CPUBrandString));
 
-    __cpuid(CPUInfo, 0x80000000);
+    cpuid(CPUInfo, 0x80000000, 0);
     unsigned int nExIds = CPUInfo[0];
 
     auto n = std::min<unsigned int>(nExIds, 0x80000004);
 
     for (unsigned int i = 0x80000002; i <= n; ++i) {
-        __cpuid(CPUInfo, i);
+        cpuid(CPUInfo, i, 0);
 
         if (i == 0x80000002)
             memcpy(CPUBrandString, CPUInfo, sizeof(CPUInfo));

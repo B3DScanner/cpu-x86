@@ -18,18 +18,6 @@ namespace FeatureDetector{
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-static inline void __cpuid(int CPUInfo[4], int InfoType)
-{
-  unsigned int a, b, c, d;
-  if(!__get_cpuid((unsigned int)InfoType, &a, &b, &c, &d)) {
-	  a=b=c=d=0;
-  }
-  CPUInfo[0] = (int)a;
-  CPUInfo[1] = (int)b;
-  CPUInfo[2] = (int)c;
-  CPUInfo[3] = (int)d;
-}
-
 void cpu_x86::cpuid(int32_t out[4], int32_t eax, int32_t ecx){
     __cpuid_count(eax, ecx, out[0], out[1], out[2], out[3]);
 }
